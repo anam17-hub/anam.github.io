@@ -1,0 +1,97 @@
+  /*
+ Program Name:patient-form.html
+Author:Anam Amir
+Date Created:9/17/2025
+Date last edited:9/26/2025
+Version:1.0
+Description: Homework 1 learning and creating a CSS file
+*/
+
+header {
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+  background-color: rgb(78, 187, 206);
+}
+header h2{
+  margin: 0 auto;      /* pushes title to the center */
+  flex: 1;             /* let h1 take space in the middle */
+}
+
+
+
+body{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  background-color:rgb(152, 228, 241);
+  margin:0;
+  height:100%;
+  min-height:100vh; /*to make sure that the page is height of the viewport*/
+
+}
+form{
+  flex-grow:1;
+}
+h1,h2{
+  font-family:"Copperplate",fantasy;
+  font-weight:normal;
+}
+
+main{
+  flex:1;/* take all remaining space */
+  font-family:"Copperplate",fantasy;
+  
+}
+
+.image{
+  text-align:left;
+
+}
+
+.apc1{
+  font-family:"optima",sans-serif;
+  
+}
+th {
+font-family:"optima",sans-serif;
+}
+
+footer{
+  text-align:center;
+  width:100%;
+  background-color:rgb(78, 187, 206);
+  height:3.0 rem;
+}
+
+#footer{
+  text-align:right;
+  font-family:"optima",sans-serif;
+  font-weight: normal;
+  margin-right:12px;
+}
+
+label{
+  text-align:right;
+  font-family:"optima",sans-serif;
+  font-weight: normal;
+}
+
+input{
+  text-align:left;
+  font-family:"optima",sans-serif;
+  font-weight: normal;
+}
+
+textarea{
+   text-align:left;
+  font-family:"optima",sans-serif;
+  font-weight: normal;
+}
+
+#today{
+   text-align:left;
+  font-family:"optima",sans-serif;
+  font-weight: normal;
+}
