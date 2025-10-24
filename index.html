@@ -55,9 +55,13 @@ Description: Homework 1 learning and creating a form
                             id="fname"
                             maxlength="30"
                             required
-                            title="Please enter your first name"
+                            title="Letters,apostrophes, and dashes only."
+                            pattern="[a-zA-Z']{1,30}
+                            onblur="validateFname()"
                             placeholder="Anam"
                             />
+                           </br>
+                           <span class="error" id="fname-error></span>"
                             </td>
                             </tr>
 
@@ -70,9 +74,13 @@ Description: Homework 1 learning and creating a form
                             id="mini"
                             maxlength="1"
                             required
-                            title="Please enter your middle intiial"
+                            title="Letters only"
+                             pattern="[a-zA-Z']{0,1}
+                             onblur="validateMini()"
                             placeholder="R"
                             />
+                            </br>
+                           <span class="error" id="mini-error></span>"
                             </td>
                             </tr>
 
@@ -85,9 +93,13 @@ Description: Homework 1 learning and creating a form
                             id="lname"
                             maxlength="30"
                             required
-                            title="Please enter your last name"
+                            title="Letters,apostrophes, and dashes only."
+                             pattern="[a-zA-Z']{1,30}
+                             onblur="validateLname()"
                             placeholder="Amir"
                             />
+                            </br>
+                           <span class="error" id="lname-error></span>"
                             </td>
                             </tr>
 
@@ -127,7 +139,11 @@ Description: Homework 1 learning and creating a form
                                 type="date"
                                 id="dob"
                                 name="dob"
+                                onblur="validateDob()"
+                                required
                                 />
+                                </br>
+                           <span class="error" id="dob-error></span>"
                                 </td>
 
                         </tr>   
@@ -142,9 +158,12 @@ Description: Homework 1 learning and creating a form
             name="ssn"
             id="ssn"
             required
-            title="Please enter your social security number"
+            title="Numbers only"
             placeholder="578-789-4531"
+            onblur="validateSsn()"
             />
+              </br>
+                           <span class="error" id="ssn-error></span>"
             </td>
       </tr>
 
@@ -167,7 +186,10 @@ Description: Homework 1 learning and creating a form
                             required
                             title="Please enter your home address"
                             placeholder="651 Louisiana Street."
+                            onblur="validateAddressline1()"
                             />
+                              </br>
+                           <span class="error" id="Addressline1></span>"
                             </td>
                             </tr>
 
@@ -271,9 +293,12 @@ Description: Homework 1 learning and creating a form
                             pattern="[0-9]{5}"
                             maxlength="5"
                             required
-                            title="Please enter your Zip Code"
+                            title="Numbers only"
                             placeholder="77090"
+                            pattern="[0-9]{5}"
                             />
+                              </br>
+                           <span class="error" id="zcode-error></span>"
                             </td>
                             </tr>
 
@@ -287,7 +312,11 @@ Description: Homework 1 learning and creating a form
                             required
                             title="Please enter your email address"
                             placeholder="apatientcare.17@gmail.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
+                            onblur="validateEmail()"
                             />
+                              </br>
+                           <span class="error" id="email-error></span>"
                             </td>
                             </tr>
 
@@ -303,7 +332,10 @@ Description: Homework 1 learning and creating a form
                             required
                             title="Please enter your Mobile Number"
                             placeholder="346-456-2167"
+                            onblur="validateMnumber()"
                             />
+                              </br>
+                           <span class="error" id="mnumber-error></span>"
                             </td>
                             </tr>
 
@@ -391,11 +423,15 @@ Description: Homework 1 learning and creating a form
                             type="text"
                             name="uname"
                             id="uname"
+                            minlength="5"
                             maxlength="15"
                             required
-                            title="Please enter your username"
+                            title="Username must contain at least 5 characters. Cannot start with a number."
                             placeholder="apccare1"
+                            onblur="validateUname()"
                             />
+                              </br>
+                           <span class="error" id="uname-error></span>"
                             </td>
                             </tr>
 
@@ -409,9 +445,14 @@ Description: Homework 1 learning and creating a form
                             maxlength="25"
                             minlength="10"
                             required
-                            title="Please enter the Password"
+                            title="Password must contain at least 10 characters, one uppercase letter,one lowercase letter, one number, and one special character."
                             placeholder="Required"
+                            onblur="validatePassord"
+                            oninput="validatePassord"
+                            onfocus="validatePassord"
                             />
+                              </br>
+                           <span class="error" id="passord-error></span>"
                             </td>
                             </tr>
 
@@ -426,7 +467,12 @@ Description: Homework 1 learning and creating a form
                             required
                             title="Please re-enter the Password"
                             placeholder="Required"
+                             onblur="confirmPassord()"
+                            oninput="confirmPassord()"
+                            onfocus="confirmPassord()"
                             />
+                             </br>
+                           <span class="error" id="passord-error></span>"
                             </td>
                             </tr>
 
@@ -436,6 +482,8 @@ Description: Homework 1 learning and creating a form
                 <input type="submit" name="submit" id="submit" style="font-family:'optima',sans-serif;">
                 &nbsp; &nbsp; &nbsp;
                 <input type="reset" name="reset" id="reset" style="font-family:'optima',sans-serif;">
+                &nbsp; &nbsp; &nbsp;
+                <input type="button" name="review" id="review" value="review" style="font-family:'optima',sans-serif;">
                 </center>
                 </td>
 
