@@ -100,8 +100,7 @@ if (email=="") {
     "Email cannot be empty.";
     return false;
 } else if (!email.match(emailR)) {
-document.getElementById("email-error").innerHTML=
-"Please enter a valid email."
+document.getElementById("email-error").innerHTML= "Please enter a valid email address."
 return false;
 } else {
     document.getElementById("email-error").innerHTML="";
