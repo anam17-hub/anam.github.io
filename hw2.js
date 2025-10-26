@@ -93,7 +93,7 @@ function validateZcode() {
 // email validation js code 
 function validateEmail() {
     email= document.getElementById("email").value;
-        var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regx pattern for email 
+        var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regex pattern for email 
 
 if (email=="") {
     document.getElementById("email-error").innerHTML= 
@@ -106,4 +106,21 @@ return false;
     document.getElementById("email-error").innerHTML="";
     return true;
 }
+}
+// mobile number validation js code 
+function validateMobile(){
+    const mobileInput = document.getElementById("mnumber");
+    const mobile = mobileInput.value.replace(/\D/g,""); //removes all non-number characters 
+
+    if (mobile.length !== 10) {
+        document.getElementById("mnumber-error").innerHTML=
+        "Mobile number cannot be left blank.";
+        return false;
+    }
+
+    const formattedMobile= 
+    mobile.slice(0,3)+ "-" + mobile.slice(3,6)+ "-" + mobile.slice(6)
+    mobileInput.value= formattedMobile;
+    document.getElementById("mnumber-error").innerHTML = "";
+    return true'
 }
