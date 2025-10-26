@@ -57,17 +57,17 @@ function validateSsn() {
     }
 }
 // address line 1 validation js code
-function validateAddressline1(){
-    var ad1 = document.getElementById("addressline1").value;
+function validateAddress1(){
+    var ad1 = document.getElementById("address1").value;
     console.log(ad1);
     console.log(ad1.length);
 
     if (ad1.length<2) {
-        document.getElementById("addressline1-error").innerHTML=
+        document.getElementById("address1-error").innerHTML=
         "Please enter something on the address line";
          return false;
     } else {
-        document.getElementById("addressline1-error").innerHTML="";
+        document.getElementById("address1-error").innerHTML="";
         return true;
     }
 }
