@@ -18,5 +18,13 @@ let output = document.getElementById("range-slider");
 output.innerHTML = slider.value;
 
 slider.oninput = function () {
-    output.innerHTML = this.value;
-};
+    output.innerHTML = this.value;};
+
+function validateDob(){
+    dob=document.getElementById("dob");
+    let date= new Date(dob.value);
+    let maxDate = new Date().setFullYear(new Date())
+
+    
+}    
+
