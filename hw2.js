@@ -56,6 +56,7 @@ function validateSsn() {
         return true;
     }
 }
+// address line 1 validation js code
 function validateAddressline1(){
     var ad1 = document.getElementById("addressline1").value;
     console.log(ad1);
@@ -69,4 +70,40 @@ function validateAddressline1(){
         document.getElementById("addressline1-error").innerHTML="";
         return true;
     }
+}
+//zip code validation js code 
+function validateZcode() {
+    const zipInput= document.getElementById("zcode");
+    let zip= zipInput.value.replace((/[^\d-]/g, "") // removes any non-number and non-dash characters
+
+    if (!zip) {
+        document.getElementById("zcode-error").innerHTML=
+        "Zip code cannot be left blank.";
+        return false;
+     }
+     if (zip.length >5) {
+        zip= zip.slice(0,5); // removes all digits after first 5
+     }
+
+     zipInput.value= zip;
+     document.getElementById("zcode-error").innerHTML="";
+     return true;
+}
+
+// email validation js code 
+function validateEmail() {
+    email= document.getElementById("email").value;
+        var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regx pattern for email 
+
+if (email="") {
+    document.getElementById("email-error").innerHTML= 
+    "Email cannot be empty.";
+    return false;
+} else if (!email.match(emailR)) {
+document.getElementById("email-error").innerHTML="Please enter a valid email."
+return false;
+} else {
+    document.getElementById("email-error").innerHTML="";
+    return true;
+}
 }
