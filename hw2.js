@@ -74,7 +74,7 @@ function validateAddressline1(){
 //zip code validation js code 
 function validateZcode() {
     const zipInput= document.getElementById("zcode");
-    let zip= zipInput.value.replace((/[^\d-]/g, "") // removes any non-number and non-dash characters
+    let zip= zipInput.value.replace(/[^\d-]/g, "") // removes any non-number and non-dash characters
 
     if (!zip) {
         document.getElementById("zcode-error").innerHTML=
