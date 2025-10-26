@@ -128,3 +128,48 @@ function validateMobile(){
     document.getElementById("mnumber-error").innerHTML = "";
     return true;
 }
+
+//username validation js code 
+function validateUname() {
+    uname= document.getElementById("uname").value;
+
+    //converts username to lowercase 
+    uname=unmae.toLowerCase();
+
+    //display username in lowercase
+    document.getElementById("uname").value= uname;
+
+    if (uname.length=== 0) {
+        document.getElementById("uname-error").innerHTML= 
+        "Username field cannot be left blank.";
+        return false;
+    }
+//checks that username does not start with a number
+        if (!isNaN(uname.charAt(0))) {
+            document.getElementById("uname-error").innerHTML=
+            "Username cannot begin with a number.";
+            return false;
+        }
+    //checks that username consists of only letters, numbers, or underscores 
+    let regex= /^[a-zA-Z0-9_-]+$/;
+    if (!regex.test(uname)) {
+        document.getElementById("uname-error").innerHTML=
+        "Username can only contain letters, numbers, or underscores.";
+        return false;
+        
+        }else if (uname,length <5) {
+          document.getElementById("uname-error").innerHTML=
+        "Username must be at least 5 characters.";
+        return false;  
+        }else if (uname.length>30) {// checks that username does not have more than 30 characters
+        document.getElementById("uname-error").innerHTML=
+        "Username cannot exceed 30 characters.";
+        return false;
+     }else { //if all of the above checks pass then username is valid
+        document.getElementById("uname-error").innerHTML="";
+        return true;
+    }
+
+
+
+}
