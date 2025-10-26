@@ -134,12 +134,12 @@ function validateUname() {
     uname= document.getElementById("uname").value;
 
     //converts username to lowercase 
-    uname=unmae.toLowerCase();
+    uname = uname.toLowerCase();
 
     //display username in lowercase
     document.getElementById("uname").value= uname;
 
-    if (uname.length=== 0) {
+    if (uname.length === 0) {
         document.getElementById("uname-error").innerHTML= 
         "Username field cannot be left blank.";
         return false;
