@@ -12,7 +12,7 @@ header {
   align-items:center;
   justify-content: space-between;
   width:100%;
-  background-color: rgb(78, 187, 206);
+  background-color: rgba(78, 212, 236, 0.491);
 }
 header h2{
   margin: 0 auto;      /* pushes title to the center */
@@ -25,7 +25,7 @@ body{
   display:flex;
   flex-direction: column;
   align-items:center;
-  background-color:rgb(152, 228, 241);
+  background-color:rgb(172, 235, 247);
   margin:0;
   height:100%;
   min-height:100vh; /*to make sure that the page is height of the viewport*/
@@ -61,7 +61,7 @@ font-family:"optima",sans-serif;
 footer{
   text-align:center;
   width:100%;
-  background-color:rgb(78, 187, 206);
+  background-color:rgb(78, 212, 236, 0.491);
   height:3.0 rem;
 }
 
