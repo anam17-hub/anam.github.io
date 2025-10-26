@@ -199,7 +199,7 @@ function validatePassword(){
         errorMessage.push("Enter at least one special character.");
     }
     //check for password to not consist of username
-    if (passord == uname || pword.includes(uname)) {
+    if (pword == uname || pword.includes(uname)) {
         errorMessage.push("Password cannot contain username.");
     }
 
