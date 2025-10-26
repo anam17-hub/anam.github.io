@@ -112,9 +112,13 @@ function validateMobile(){
     const mobileInput = document.getElementById("mnumber");
     const mobile = mobileInput.value.replace(/\D/g,""); //removes all non-number characters 
 
-    if (mobile.length !== 10) {
+    if (mobile.length ===0){
+        document.getElementById("mnumber-error").innerHTML = "Mobile number cannot be left blank.";
+        return false;
+
+    }else if (mobile.length !== 10) {
         document.getElementById("mnumber-error").innerHTML=
-        "Mobile number cannot be left blank.";
+        "Please enter a valid 10-digit mobile number.";
         return false;
     }
 
