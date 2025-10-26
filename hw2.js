@@ -176,35 +176,35 @@ function validateUname() {
 
 //password validation js code 
 function validatePassword(){
-    const passord = document.getElementById("passord").value;
+    const pword = document.getElementById("pword").value;
     const uname=document.getElementById("uname").value;
 
     //set up and initializises array
     const errorMessage = [];
 
     //check for lowercase letters 
-    if (!passord.match(/[a-z]/)) {
+    if (!pword.match(/[a-z]/)) {
         errorMessage.push("Enter at least one lowercase letter.");
     } 
     //check for uppercase letters 
-    if (!passord.match(/[A-Z]/)) {
+    if (!pword.match(/[A-Z]/)) {
         errorMessage.push("Enter at least one uppercase letter.");
     }
  //check for numbers
-    if (!passord.match(/[0-9]/)) {
+    if (!pword.match(/[0-9]/)) {
         errorMessage.push("Enter at least one number.");
     }
  //check for special characters 
-    if (!passord.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+    if (!pword.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
         errorMessage.push("Enter at least one special character.");
     }
     //check for password to not consist of username
-    if (passord == uname || passord.includes(uname)) {
+    if (passord == uname || pword.includes(uname)) {
         errorMessage.push("Password cannot contain username.");
     }
 
     //displays error messages of there are any 
-    const errorContainer= document.querySelector(".passord-message");
+    const errorContainer= document.querySelector(".pword-message");
     errorContainer.innerHTML= errorMessage
     .map((message) => '<span>{$message}</span><br/>')
     .join("");

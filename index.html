@@ -436,23 +436,23 @@ Description: Homework 1 learning and creating a form
                             </tr>
 
                             <tr>
-                        <td class="apc1><label for="passord">Password:</label></td>
+                        <td class="apc1><label for="pword">Password:</label></td>
                            <td>
                             <input
                             type="password"
-                            name="passord"
-                            id="passord"
+                            name="pword"
+                            id="pword"
                             maxlength="25"
                             minlength="10"
                             required
                             title="Password must contain at least 10 characters, one uppercase letter,one lowercase letter, one number, and one special character."
                             placeholder="Required"
-                            onblur="validatePassword"
-                            oninput="validatePassword"
-                            onfocus="validatePassword"
+                            onblur="validatePassword()"
+                            oninput="validatePassword()"
+                            onfocus="validatePassword()"
                             />
                               </br>
-                           <span class="error" id="passord-error></span>"
+                           <span class="error" id="pword-error></span>"
                             </td>
                             </tr>
 
