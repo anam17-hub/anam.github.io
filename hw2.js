@@ -217,11 +217,11 @@ function validatePassword(){
         pword2= document.getElementById("con_pword").value;
 
         if (pword1 != pword2) {
-            document.getElementById("pword-error").innerHTML=
+            document.getElementById("pword2-error").innerHTML=
             "Passords do not match.";
             return false;
         } else if {
-            document.getElementById("pword-error").innerHTML=
+            document.getElementById("pword2-error").innerHTML=
             "Passwords do match.";
             return true;
 
