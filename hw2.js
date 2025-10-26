@@ -95,12 +95,13 @@ function validateEmail() {
     email= document.getElementById("email").value;
         var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regx pattern for email 
 
-if (email="") {
+if (email=="") {
     document.getElementById("email-error").innerHTML= 
     "Email cannot be empty.";
     return false;
 } else if (!email.match(emailR)) {
-document.getElementById("email-error").innerHTML="Please enter a valid email."
+document.getElementById("email-error").innerHTML=
+"Please enter a valid email."
 return false;
 } else {
     document.getElementById("email-error").innerHTML="";
