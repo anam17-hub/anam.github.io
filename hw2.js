@@ -122,5 +122,5 @@ function validateMobile(){
     mobile.slice(0,3)+ "-" + mobile.slice(3,6)+ "-" + mobile.slice(6)
     mobileInput.value= formattedMobile;
     document.getElementById("mnumber-error").innerHTML = "";
-    return true'
+    return true;
 }
