@@ -173,3 +173,39 @@ function validateUname() {
 
 
 }
+
+//password validation js code 
+function validatePassword(){
+    const passord = document.getElementById("passord").value;
+    const uname=document.getElementById("uname").value;
+
+    //set up and initializises array
+    const errorMessage = [];
+
+    //check for lowercase letters 
+    if (!passord.match(/[a-z]/)) {
+        errorMessage.push("Enter at least one lowercase letter.");
+    } 
+    //check for uppercase letters 
+    if (!passord.match(/[A-Z]/)) {
+        errorMessage.push("Enter at least one uppercase letter.");
+    }
+ //check for numbers
+    if (!passord.match(/[0-9]/)) {
+        errorMessage.push("Enter at least one number.");
+    }
+ //check for special characters 
+    if (!passord.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+        errorMessage.push("Enter at least one special character.");
+    }
+    //check for password to not consist of username
+    if (passord == uname || passord.includes(uname)) {
+        errorMessage.push("Password cannot contain username.");
+    }
+
+    //displays error messages of there are any 
+    const errorContainer= document.querySelector(".passord-message");
+    errorContainer.innerHTML= errorMessage
+    .map((message) => '<span>{$message}</span><br/>')
+    .join("");
+    }
