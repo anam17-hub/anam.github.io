@@ -178,6 +178,7 @@ function validateUname() {
 function validatePassword(){
     const pword = document.getElementById("pword").value;
     const uname=document.getElementById("uname").value;
+    
 
     //set up and initializises array
     const errorMessage = [];
