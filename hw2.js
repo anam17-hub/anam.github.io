@@ -204,9 +204,26 @@ function validatePassword(){
         errorMessage.push("Password cannot contain username.");
     }
 
-    //displays error messages of there are any 
+    //displays error messages if there are any 
     const errorContainer= document.querySelector(".pword-message");
     errorContainer.innerHTML= errorMessage
     .map((message) => '<span>{$message}</span><br/>')
     .join("");
+    }
+
+    //confirm password validation js code 
+    function confirmPassword(){
+        pword1= document.getElementById("pword").value;
+        pword2= document.getElementById("con_pword").value;
+
+        if (pword1 != pword2) {
+            document.getElementById("pword-error").innerHTML=
+            "Passords do not match.";
+            return false;
+        } else if {
+            document.getElementById("pword-error").innerHTML=
+            "Passwords do match.";
+            return true;
+
+        }
     }
