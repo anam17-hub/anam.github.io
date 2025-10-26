@@ -62,7 +62,8 @@ function validateAddressline1(){
     console.log(ad1.length);
 
     if (ad1.length<2) {
-        document.getElementById("addressline1-error").innerHTML="Please enter something on the address line";
+        document.getElementById("addressline1-error").innerHTML=
+        "Please enter something on the address line";
          return false;
     } else {
         document.getElementById("addressline1-error").innerHTML="";
