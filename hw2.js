@@ -57,7 +57,7 @@ function validateSsn() {
     }
 }
 // address 1 validation js code
-function validateAddressline1(){
+function validateaddressline1(){
     var ad1 = document.getElementById("addressline1").value;
     console.log(ad1);
     console.log(ad1.length);
