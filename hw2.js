@@ -152,7 +152,7 @@ function validateUname() {
         document.getElementById("uname-error").innerHTML=
         "Username can only contain letters, numbers, or underscores.";
         return false;
-        }else if (uname,length <5) {
+        }else if (uname.length <5) {
           document.getElementById("uname-error").innerHTML=
         "Username must be at least 5 characters.";
         return false;  
@@ -212,7 +212,7 @@ function validatePassword(){
             document.getElementById("pword2-error").innerHTML=
             "Passords do not match.";
             return false;
-        } else if {
+        } else {
             document.getElementById("pword2-error").innerHTML=
             "Passwords do match.";
             return true;
