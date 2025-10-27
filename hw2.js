@@ -172,7 +172,7 @@ function validatePassword(){
     const uname=document.getElementById("uname").value;
     
 
-    //set up and initializises array
+    //set up and initializes array
     const errorMessage = [];
 
     //check for lowercase letters 
