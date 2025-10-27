@@ -112,14 +112,14 @@ function validateMobile(){
     const mobileInput = document.getElementById("mnumber");
     const mobile = mobileInput.value.replace(/\D/g,""); //removes all non-number characters 
 
-    if (mobile.length !== 10) {
+    if (mobile.length == 0) {
         document.getElementById("mnumber-error").innerHTML = 
         "Mobile number cannot be left blank.";
         return false;
     }
 
     const formattedMobile= 
-    mobile.slice(0,3)+ "-" + mobile.slice(3,6)+ "-" + mobile.slice(6)
+    mobile.slice(0,3)+ "-" + mobile.slice(3,6)+ "-" + mobile.slice(6,10)
     mobileInput.value= formattedMobile;
     document.getElementById("mnumber-error").innerHTML = "";
     return true;
