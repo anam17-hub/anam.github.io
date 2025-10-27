@@ -261,4 +261,4 @@ function validatePassword(){
     //remove user input 
     function removeReview(){
         document.getElementById("showInput").innerHTML= "";
-        }
+     }
