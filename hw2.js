@@ -251,10 +251,10 @@ function validatePassword(){
 
                                   }
                                   break;
-                                  case "button":
-                                    case "submit":
-                                        case "reset":
-                                            break:
+                                case "button":
+                                case "submit":
+                                case "reset":
+                                     break;
 
                                     default:
                                         formoutput= formoutput + "<tr><td align='right'>" + formcontent.elements[i].name + "</td>";
