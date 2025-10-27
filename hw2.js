@@ -240,18 +240,16 @@ function validatePassword(){
                                 formoutput=formoutput+ "<tr> <td align ='right'" + formcontent.elements[i].name + "</td>";
                                 formouput="<td class='outputdata'>" + formcontent.elements[i].value + "</td></tr>";
 
-                                  }
-                                  break;
-                                case "button":
-                                case "submit":
-                                case "reset":
-                                     break;
-
-                                    default:
-                                        formoutput= formoutput + "<tr><td align='right'>" + formcontent.elements[i].name + "</td>";
-                                        formoutput= formoutput + "<td class = 'outputdata'>" + formcontent.elements[i].value + "</td></tr>";
-
-                }
+                        }
+                     break;
+                     case "button":
+                     case "submit":
+                    case "reset":
+                     break;
+                    default:
+                     formoutput= formoutput + "<tr><td align='right'>" + formcontent.elements[i].name + "</td>";
+                     formoutput= formoutput + "<td class = 'outputdata'>" + formcontent.elements[i].value + "</td></tr>";
+                     }
             }
         }
         if (formoutput.length>0) {
