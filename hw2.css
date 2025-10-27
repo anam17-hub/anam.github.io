@@ -115,3 +115,26 @@ border-spacing: 2px;
 border-radius: 20px;
 color: red;
 }
+
+#review {
+margin-top:5px;
+}
+
+table.output,
+tr.output,
+td.output {
+  width:500px;
+  background-color:rgba(19, 212, 230, 0.425);
+  padding:10px;
+  border-spacing:2px;
+  border-radius:20px;
+  color:black;
+}
+
+td.output {
+  width:500px;
+  background-color:rgba(19, 212, 230, 0.425);
+  padding:10px;
+  border-spacing:2px;
+  
+}
