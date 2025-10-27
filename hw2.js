@@ -199,7 +199,7 @@ function validatePassword(){
     //displays error messages if there are any 
     const errorContainer= document.querySelector(".pword-message");
     errorContainer.innerHTML= errorMessage
-    .map((message) => '<span>{$message}</span><br/>')
+    .map((message) => '<span>${message}</span><br/>')
     .join("");
     }
 
