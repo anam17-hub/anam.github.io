@@ -112,13 +112,9 @@ function validateMobile(){
     const mobileInput = document.getElementById("mnumber");
     const mobile = mobileInput.value.replace(/\D/g,""); //removes all non-number characters 
 
-    if (mobile.length ===0){
-        document.getElementById("mnumber-error").innerHTML = "Mobile number cannot be left blank.";
-        return false;
-
-    }else if (mobile.length !== 10) {
-        document.getElementById("mnumber-error").innerHTML=
-        "Please enter a valid 10-digit mobile number.";
+    if (mobile.length !== 10) {
+        document.getElementById("mnumber-error").innerHTML = 
+        "Mobile number cannot be left blank.";
         return false;
     }
 
@@ -151,12 +147,11 @@ function validateUname() {
             return false;
         }
     //checks that username consists of only letters, numbers, or underscores 
-    let regex= /^[a-zA-Z0-9_-]+$/;
+    let regex= /^[a-zA-Z0-9_]+$/;
     if (!regex.test(uname)) {
         document.getElementById("uname-error").innerHTML=
         "Username can only contain letters, numbers, or underscores.";
         return false;
-        
         }else if (uname,length <5) {
           document.getElementById("uname-error").innerHTML=
         "Username must be at least 5 characters.";
@@ -169,9 +164,6 @@ function validateUname() {
         document.getElementById("uname-error").innerHTML="";
         return true;
     }
-
-
-
 }
 
 //password validation js code 
@@ -224,7 +216,6 @@ function validatePassword(){
             document.getElementById("pword2-error").innerHTML=
             "Passwords do match.";
             return true;
-
         }
     }
 
